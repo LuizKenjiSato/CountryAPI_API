@@ -42,7 +42,6 @@ namespace CountryAPI.Services
         {
             var countryUpdate = _context.Country.Where(r => r.CountryName == countryEntity.CountryName).FirstOrDefault();
 
-            countryUpdate.CountryName = countryEntity.CountryName;
             countryUpdate.CapitalCity = countryEntity.CapitalCity;
             countryUpdate.Continent = countryEntity.Continent;
             countryUpdate.Currency = countryEntity.Currency;
