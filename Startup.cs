@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft;
+using Npgsql;
 
 namespace CountryAPI_API
 {
@@ -34,10 +35,13 @@ namespace CountryAPI_API
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
-            //services.AddDbContext<CountryDBContext>(options =>
-            //    options.UseNpgsql(Configuration.GetConnectionString("RDSContext")));
-            services.AddDbContext<CountryDBContext>();
-            // Running that inside the CountryDBContext...something wrong with the ConnectionString
+            var builder = new NpgsqlConnectionStringBuilder("Host=country-api.cow0ymyrmkbf.ca-central-1.rds.amazonaws.com; Port=5432; Database=CountryAPI;");
+            builder.Username = Configuration["username"];
+            builder.Password = Configuration["password"];
+
+            var connection = builder.ConnectionString;
+
+            services.AddDbContext<CountryDBContext>(options => options.UseNpgsql(connection));
 
             services.AddScoped<ICountryRepository, CountryRepository>();
 

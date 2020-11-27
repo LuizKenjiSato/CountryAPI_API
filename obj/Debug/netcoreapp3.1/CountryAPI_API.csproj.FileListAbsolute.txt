@@ -48,3 +48,11 @@ C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\Mic
 C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\Amazon.Extensions.Configuration.SystemsManager.dll
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\AWSSDK.Core.dll
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\AWSSDK.Extensions.NETCore.Setup.dll
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\AWSSDK.SimpleSystemsManagement.dll
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\obj\Debug\netcoreapp3.1\CountryAPI_API.csproj.CoreCompileInputs.cache
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\obj\Debug\netcoreapp3.1\CountryAPI_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\obj\Debug\netcoreapp3.1\CountryAPI_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\luizs\Desktop\New folder (3)\CountryAPI_API\bin\Debug\netcoreapp3.1\aws-beanstalk-tools-defaults.json

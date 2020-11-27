@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,11 @@ namespace CountryAPI.Entities
                 .HasIndex(p => new { p.CountryName })
                 .IsUnique(true);
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=country-api.cow0ymyrmkbf.ca-central-1.rds.amazonaws.com; Port=5432; Database=CountryAPI;Username=postgres; Password=Padros15975369");
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+            
+        //    //optionsBuilder.UseNpgsql("Host=country-api.cow0ymyrmkbf.ca-central-1.rds.amazonaws.com; Port=5432; Database=CountryAPI;Username=postgres; Password=Padros15975369");
+        //}
+            
     }
 }
