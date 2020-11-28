@@ -58,7 +58,7 @@ namespace CountryAPI.Controllers
             return Ok(countryCapital);
         }
         [HttpGet("CountryInfo/Language/{language}")]
-        public async Task<ActionResult<IEnumerable<ActionResult>>> GetCountryLanguage(string language)
+        public async Task<ActionResult<IEnumerable<CountryEntity>>> GetCountryLanguage(string language)
         {
             var countryLanguage = await _countryRepository.GetCountryLanguage(language);
             return Ok(countryLanguage);
