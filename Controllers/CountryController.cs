@@ -44,12 +44,31 @@ namespace CountryAPI.Controllers
             return Ok(countryInfo);
         }
 
-        [HttpGet("CountryInfo/{country}")]
+        [HttpGet("CountryInfo/Country/{country}")]
         public async Task<ActionResult<CountryEntity>> GetCountryInfo(string country)
         {
             //var countryInfo = _context.Country.Where(r => r.CountryName == country).FirstOrDefault();
             var countryInfo = await _countryRepository.GetCountryInfo(country);
             return Ok(countryInfo);
+        }
+        [HttpGet("CountryInfo/Capital/{capital}")]
+        public async Task<ActionResult> GetCountryCapital(string capital)
+        {
+            var countryCapital = await _countryRepository.GetCountryCapital(capital);
+            return Ok(countryCapital);
+        }
+        [HttpGet("CountryInfo/Language/{language}")]
+        public async Task<ActionResult<IEnumerable<ActionResult>>> GetCountryLanguage(string language)
+        {
+            var countryLanguage = await _countryRepository.GetCountryLanguage(language);
+            return Ok(countryLanguage);
+        }
+
+        [HttpGet("CountryInfo/Currency/{currency}")]
+        public async Task<ActionResult<IEnumerable<CountryEntity>>> GetCountryCurrency(string currency)
+        {
+            var countryCurrency = await _countryRepository.GetCountryCurrency(currency);
+            return Ok(countryCurrency);
         }
 
         [HttpPost("AddCountry")]
@@ -109,6 +128,7 @@ namespace CountryAPI.Controllers
 
             return Ok(final_price);
         }
+
 
 
 

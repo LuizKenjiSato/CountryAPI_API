@@ -13,6 +13,11 @@ namespace CountryAPI.Services
         Task<IEnumerable<CountryEntity>> GetAllCountryInfo();
 
         Task<CountryEntity> GetCountryInfo(string country);
+        Task<CountryEntity> GetCountryCapital(string capital);
+
+        Task<IEnumerable<CountryEntity>> GetCountryLanguage(string language);
+
+        Task<IEnumerable<CountryEntity>> GetCountryCurrency(string currency);
 
         Task AddCountryInfo(CountryEntity countryEntity);
 

@@ -32,6 +32,26 @@ namespace CountryAPI.Services
             var country_info = _context.Country.Where(r => r.CountryName == country);
             return await country_info.FirstOrDefaultAsync();
         }
+        public async Task<CountryEntity> GetCountryCapital(string capital)
+        {
+            var countryCapital = await _context.Country.Where(r => r.CapitalCity == capital).FirstOrDefaultAsync();
+
+            return countryCapital;
+        }
+
+        public async Task<IEnumerable<CountryEntity>> GetCountryLanguage(string language)
+        {
+            var countryLanguages = await _context.Country.Where(r => r.PrimaryLanguage == language).ToListAsync();
+
+            return countryLanguages;
+        }
+
+        public async Task<IEnumerable<CountryEntity>> GetCountryCurrency(string currency)
+        {
+            var countryCurrency = await _context.Country.Where(r => r.Currency == currency).ToListAsync();
+
+            return countryCurrency;
+        }
 
         public async Task AddCountryInfo(CountryEntity countryEntity)
         {
@@ -68,6 +88,8 @@ namespace CountryAPI.Services
             double finalValue = USD / toCountryUSD;
             return finalValue;
         }
+        
+
 
         public async Task Save()
         {
